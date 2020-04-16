@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
+//executado apenas uma vez:
+ReactDOM.render( //renderiza o primeito componente do projeto (App) e o aplica dentro da div root
   <React.StrictMode>
     <App />
   </React.StrictMode>,

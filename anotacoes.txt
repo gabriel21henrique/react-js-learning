@@ -1,0 +1,33 @@
+-> O que é o React?
+* É uma biblioteca que manipula a DOM, usada em arquiteturas SPA (Single Page Application)
+* É baseada na ideia de componentização, tudo em react são componentes;
+
+-> Ferramentas
+* Node, Yarn
+
+-> Estrutura de pastas
+* Node_Modules: dependências
+* Public: pasta onde contém código que será renderizado para o usuário final
+* Src: todo o codigo da Application
+* gitignore: ignora arquivos para n subir para o github
+* package.json: dependências utilizados pela aplicação
+
+-> Comandos
+* npm start: executa o script "start" do package.json que por sua vez roda a aplicação
+
+-> Conceitos
+* componente: parte visual com javascript e estilização (lógica, estrutura e estilização)
+*
+
+-> Funcionamento
+* index.js: primeiro arquivo a ser executado pela aplicação
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
