@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import api from '../../services/api';
 import './styles.css';
 import { Link } from 'react-router-dom';
@@ -49,19 +49,24 @@ export default class Main extends Component {
     const { products, page, productInfo } = this.state;
 
     return (
-      <div className="product-list">
-        {products.map(product => (
-          <article key={product._id}>
-            <strong>{product.title}</strong>
-            <p>{product.description}</p>
-            <Link to={`/products/${product._id}`}>Acessar</Link>
-          </article>
-        ))}
-        <div className="actions">
-          <button disabled={page === 1} onClick={this.prevPage}>Anterior</button>
-          <button disabled={page === productInfo.pages} onClick={this.nextPage}>Próximo</button>
+      <Fragment>
+        <div className='create-product'>
+          <Link to={'/products/new'}>Novo produto</Link>
         </div>
-      </div >
+        <div className="product-list">
+          {products.map(product => (
+            <article key={product._id}>
+              <strong>{product.title}</strong>
+              <p>{product.description}</p>
+              <Link to={`/products/${product._id}`}>Acessar</Link>
+            </article>
+          ))}
+          <div className="actions">
+            <button disabled={page === 1} onClick={this.prevPage}>Anterior</button>
+            <button disabled={page === productInfo.pages} onClick={this.nextPage}>Próximo</button>
+          </div>
+        </div >
+      </Fragment>
     )
   }
 }
